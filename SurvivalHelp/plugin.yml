@@ -1,0 +1,8 @@
+main: me.trusthage.survivalhelp.Main
+version: 1.0
+author: TrustHage
+name: RecipeHelp
+
+commands:
+  recipe:
+    description: Get the recipe of a item.

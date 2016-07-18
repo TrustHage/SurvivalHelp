@@ -10,6 +10,8 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import net.md_5.bungee.api.ChatColor;
+
 public class RecipeCommand implements CommandExecutor{
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
@@ -17,7 +19,23 @@ public class RecipeCommand implements CommandExecutor{
 		if(!(sender instanceof Player))return false;
 		Player player = (Player)sender;
 		
-		openAnvil(player.getPlayer());
+		if(args.length != 1){
+			player.sendMessage(ChatColor.RED + "Please type /recipe <item>");
+		}else{
+			switch(args[0]){
+			case "iron_ingot":
+				openIronIngot(player.getPlayer());
+				break;
+			case "iron_block":
+				openIronBlock(player.getPlayer());
+				break;
+			case "anvil":
+				openAnvil(player.getPlayer());
+				break;
+			default:
+				player.sendMessage(ChatColor.RED + "Please ask a craftable item, use /craftable for the list of craftable items.");
+			}
+		}
 		
 		return false;
 	}

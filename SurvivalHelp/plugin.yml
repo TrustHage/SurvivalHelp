@@ -2,6 +2,7 @@ main: me.trusthage.survivalhelp.Main
 version: 1.0
 author: TrustHage
 name: RecipeHelp
+description: Get help with your survival adventure.
 
 commands:
   recipe:

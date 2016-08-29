@@ -7,3 +7,5 @@ description: Get help with your survival adventure.
 commands:
   recipe:
     description: Get the recipe of a item.
+  craft:
+    description: Opens a portable crafting table.

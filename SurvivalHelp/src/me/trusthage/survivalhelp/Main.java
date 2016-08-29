@@ -17,6 +17,7 @@ public class Main extends JavaPlugin{
 		plugin = this;
 		logger.info("SurvivalHelp has been enabled.");
 		getCommand("recipe").setExecutor(new RecipeCommand());
+		getCommand("craft").setExecutor(new CraftCommand());
 		PluginManager pm = Bukkit.getPluginManager();
 		pm.registerEvents(new CraftingListener(), this);
 		recipes.saddleRecipe();
